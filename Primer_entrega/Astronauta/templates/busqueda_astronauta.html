@@ -4,11 +4,11 @@
 <h5 class="post-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium delectus id obcaecati, reprehenderit itaque modi  exercitationem corporis consequatur fuga, et vitae, deserunt quidem dicta ducimus amet soluta enim omnis.</h5>
 <br>
 <br>
-<h4>¡Sepa su peso en la luna!</h4>
-<h3>Tu peso en la luna es {{peso_luna}}</h3>
-<div class="col-lg-12 align-self-baseline">
-    <p class="text-white-75 mb-5"></p>
-    <a class="btn btn-primary btn-xl" href="{% url 'pagina_inicio' %}">Volver al inicio</a>
-</div>
+<form action="" method = "POST"> {% csrf_token %}
+    <table>
+        <input type="text" name = "astronauta">
+    </table>
+    <input type="submit" value = "Buscar">
+</form>
 
 {% endblock ContenidoQueCambia %}

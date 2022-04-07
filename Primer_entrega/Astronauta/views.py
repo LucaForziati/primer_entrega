@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 from .models import Astronauta, Peso_luna, Peso_marte, Vel_luz
@@ -136,5 +137,17 @@ def velocidad_luz(request):
         return render(request, "velocidad.html", {"velocidad_formulario": velocidad_formulario})   
 
 
+def buscar(request):
 
+    if request.method == "POST":
+        id_astronauta = request.POST["astronauta"]
+        dato_astronauta = Astronauta.objects.get(id = id_astronauta)
+
+        astronauta_contexto = dato_astronauta
+
+        return render(request, "astronauta_perfil.html", {"astronauta_contexto": astronauta_contexto})
+    else:
+        
+        return render(request, "busqueda_astronauta.html")
+    
 
