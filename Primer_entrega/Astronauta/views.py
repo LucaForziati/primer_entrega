@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .models import Astronauta
+from .forms import Astronauta_formulario
 # Create your views here.
 
 def prueba_template(request):
@@ -16,4 +18,27 @@ def iniciar(request):
 
 def crear_astronauta(request):
 
-    return render(request, "crear_astronauta.html")
+    if request.method == "POST":
+
+        astronauta_formulario = Astronauta_formulario(request.POST)
+
+        if astronauta_formulario.is_valid():
+
+            astronauta_informacion = astronauta_formulario.cleaned_data
+            
+            astronauta = Astronauta (
+                nombre = astronauta_formulario["nombre"],
+                apellido = astronauta_formulario["apellido"],
+                )
+            astronauta.save()
+
+            astronauta_contexto = astronauta_informacion
+
+            return render(request, "astronauta_creado.html", {"astronauta_contexto": astronauta_contexto, "id" : astronauta.id})
+
+    else: 
+
+        astronauta_formulario = Astronauta_formulario()
+
+        return render(request, "crear_astronauta.html", {"astronauta_formulario": astronauta_formulario})
+
