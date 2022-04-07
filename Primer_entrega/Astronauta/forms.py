@@ -1,18 +1,18 @@
 from django import forms
 
-class Astronauta(forms.Form):
+class Astronauta_formulario(forms.Form):
 
     nombre = forms.CharField()
     apellido = forms.CharField()
 
-class Peso_luna(forms.Form):
+class Peso_luna_formulario(forms.Form):
 
     peso = forms.FloatField()
 
-class Peso_marte(forms.Form):
+class Peso_marte_formulario(forms.Form):
 
     peso = forms.FloatField()
 
-class Vel_luz(forms.Form):
+class Vel_luz_formulario(forms.Form):
 
     distancia = forms.IntegerField()
