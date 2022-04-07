@@ -27,8 +27,8 @@ def crear_astronauta(request):
             astronauta_informacion = astronauta_formulario.cleaned_data
             
             astronauta = Astronauta (
-                nombre = astronauta_formulario["nombre"],
-                apellido = astronauta_formulario["apellido"],
+                nombre = astronauta_informacion["nombre"],
+                apellido = astronauta_informacion["apellido"],
                 )
             astronauta.save()
 
