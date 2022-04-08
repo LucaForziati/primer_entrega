@@ -15,4 +15,4 @@ class Peso_marte_formulario(forms.Form):
 
 class Vel_luz_formulario(forms.Form):
 
-    distancia = forms.IntegerField()
+    distancia = forms.FloatField()

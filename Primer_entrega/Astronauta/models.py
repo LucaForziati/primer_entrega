@@ -8,7 +8,7 @@ class Astronauta(models.Model):
     apellido = models.CharField(max_length = 30)
     peso_luna = models.FloatField(blank = True, null = True)
     peso_marte = models.FloatField(blank = True, null = True)
-    distancia_recorrida = models.IntegerField(blank = True, null = True)
+    distancia_recorrida = models.FloatField(blank = True, null = True)
 
 class Peso_luna(models.Model):
 
@@ -20,4 +20,4 @@ class Peso_marte(models.Model):
 
 class Vel_luz(models.Model):
 
-    distancia = models.IntegerField()
+    distancia = models.FloatField()
