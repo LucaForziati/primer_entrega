@@ -61,7 +61,7 @@ def luna(request):
             numero_astronauta = request.POST["numero_astronauta"]
 
             peso_luna = Astronauta.objects.get(id = int(numero_astronauta)) 
-            peso_luna.peso_luna = (luna.peso / 9.81) * 1.62
+            peso_luna.peso_luna = "{:.2f}".format((luna.peso / 9.81) * 1.62)
             peso_luna.save()
 
             luna_contexto = luna_informacion
@@ -92,7 +92,7 @@ def marte(request):
             numero_astronauta = request.POST["numero_astronauta"]
 
             peso_marte = Astronauta.objects.get(id = int(numero_astronauta)) 
-            peso_marte.peso_marte = (marte.peso * 3.72) / 9.80
+            peso_marte.peso_marte = "{:.2f}".format((marte.peso * 3.72) / 9.80)
             peso_marte.save()
 
             marte_contexto = marte_informacion
