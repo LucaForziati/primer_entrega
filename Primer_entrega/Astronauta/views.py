@@ -124,7 +124,7 @@ def velocidad_luz(request):
             numero_astronauta = request.POST["numero_astronauta"]
 
             velocidad_nave = Astronauta.objects.get(id = int(numero_astronauta)) 
-            velocidad_nave.distancia_recorrida = float((velocidad.distancia/3600)/299792.45)
+            velocidad_nave.distancia_recorrida = float(velocidad.distancia/(299792.45*90/100))
             velocidad_nave.save()
 
             velocidad_contexto = velocidad_informacion
