@@ -1,13 +1,19 @@
 {% extends "padre.html" %}
 {% block ContenidoQueCambia %}
-<h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-<h5 class="post-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium delectus id obcaecati, reprehenderit itaque modi  exercitationem corporis consequatur fuga, et vitae, deserunt quidem dicta ducimus amet soluta enim omnis.</h5>
+<h2 class="post-title">La luna</h2>
+<h5 style = "font-weight: 200;">La Luna es el único satélite natural de la Tierra. Con un diámetro ecuatorial de 3476 km, es el quinto satélite más grande del sistema solar, mientras que en cuanto al tamaño proporcional respecto a su planeta es el satélite más grande: un cuarto del diámetro de la Tierra y 1/81 de su masa.</h5> 
+<h5 style = "font-weight: 200;">
+    Es, además, después de Ío, el segundo satélite más denso. Se encuentra en relación síncrona con la Tierra, siempre mostrando la misma cara hacia el planeta. El hemisferio visible está marcado con oscuros mares lunares de origen volcánico entre las brillantes montañas antiguas y los destacados astroblemas.
+</h5>
+</h5 style = "font-weight: 200;">La fuerza de la gravedad también existe en la Luna. Pero como la Luna es más pequeña que la Tierra, la atracción que se siente en la Luna es más pequeña que la atracción terrestre.</h5>
 <br>
 <br>
-<h4>¡Sepa su peso en la luna!</h4>
+<h5>¡Sepa su peso en la luna!</h5>
 <form action="" method = "POST"> {% csrf_token %}
     <table>
-        <input type="text" placeholder="Ingrese su numero de astronauta", name = "numero_astronauta">
+        <input type="text" placeholder="ingrese su id_astronauta", name = "numero_astronauta">
+        <p> </p>
+        <h6>Ingrese su peso</h6>
         {{luna_formulario.as_p}}
     </table>
     <input type="submit" name="Enviar" id="">

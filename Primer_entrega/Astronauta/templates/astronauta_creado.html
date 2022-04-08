@@ -1,11 +1,11 @@
 {% extends "padre.html" %}
 {% block ContenidoQueCambia %}
 <h2>¡Felicitaciones!</h2>
-<h4>Se ha creado al astronauta {{astronauta_contexto.nombre}} {{astronauta_contexto.apellido}}</h4>
-<h4>Su numero de astronauta es {{id}}</h4>
-<h5>¡Recuerdelo! Serà necesario para futuras misiones</h5>
+<h5 style = "font-weight: 200;">Se ha creado al astronauta: <span style="font-style: unset;">{{astronauta_contexto.nombre}} {{astronauta_contexto.apellido}}.</span></h5>
+<h5 style = "font-weight: 200;">Su "id_astronauta" es: <span style= "font-weight: bold;">{{id}}</span> .</h5>
+<h5 style = "font-weight: 200;">¡Recuerdelo! Serà necesario para futuras misiones.</h5>
 <div class="col-lg-12 align-self-baseline">
     <p class="text-white-75 mb-5"></p>
-    <a class="btn btn-primary btn-xl" href="{% url 'pagina_inicio' %}">¡Continuar a las misiones!</a>
+    <a class="btn btn-primary btn-xl" href="{% url 'pagina_inicio' %}">¡Continuar al inicio!</a>
 
 {% endblock ContenidoQueCambia %}

@@ -1,14 +1,20 @@
 {% extends "padre.html" %}
 {% block ContenidoQueCambia %}
-<h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-<h5 class="post-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium delectus id obcaecati, reprehenderit itaque modi  exercitationem corporis consequatur fuga, et vitae, deserunt quidem dicta ducimus amet soluta enim omnis.</h5>
+<h2 class="post-title">Marte</h2>
+<h5 style = "font-weight: 200;">Marte es el cuarto planeta en orden de distancia al Sol y el segundo más pequeño del sistema solar, después de Mercurio. Recibió su nombre en homenaje al dios de la guerra de la mitología romana (Ares en la mitología griega), y también es conocido como «el planeta rojo» debido a la apariencia rojiza que le confiere el óxido de hierro predominante en su superficie</h5> 
+<h5 style = "font-weight: 200;">
+    El periodo de rotación y los ciclos estacionales son similares a los de la Tierra, ya que la inclinación es lo que genera las estaciones. Marte alberga el Monte Olimpo, la montaña y el volcán más grande y alto conocido en el sistema solar, y los Valles Marineris, uno de los mayores cañones del sistema solar.
+</h5>
+</h5 style = "font-weight: 200;">La masa de Marte es la décima parte de la de la Tierra, y su tamaño es la mitad. Por este motivo, la gravedad superficial es menor que en la Tierra: sólo 3,7 m/s2 en lugar de 9,8 m/s2. En Marte pesarías la mitad que en la Tierra. Esta diferencia en la gravedad es también la causa de que en Marte la velocidad de escape sea más baja, por ello es más fácil que Marte pierda su atmósfera (y sus piedras tras un impacto).</h5>
 <br>
 <br>
 <h4>¡Sepa su peso en marte!</h4>
 <p>Ingrese su numero de astronauta</p>
 <form action="" method = "POST"> {% csrf_token %}
     <table>
-        <input type="text" placeholder="Ingrese su numero de astronauta", name = "numero_astronauta">
+        <input type="text" placeholder="ingrese su id_astronauta", name = "numero_astronauta">
+        <p> </p>
+        <h6>Ingrese su peso</h6>
         {{marte_formulario.as_p}}
     </table>
     <input type="submit" name="Enviar" id="">

@@ -101,9 +101,9 @@ def marte(request):
 
     else: 
 
-        luna_formulario = Peso_luna_formulario()
+        marte_formulario = Peso_marte_formulario()
 
-        return render(request, "luna.html", {"luna_formulario": luna_formulario})
+        return render(request, "marte.html", {"marte_formulario": marte_formulario})
 
 def velocidad_luz(request):
 
@@ -124,7 +124,7 @@ def velocidad_luz(request):
             numero_astronauta = request.POST["numero_astronauta"]
 
             velocidad_nave = Astronauta.objects.get(id = int(numero_astronauta)) 
-            velocidad_nave.distancia_recorrida = velocidad.distancia
+            velocidad_nave.distancia_recorrida = float((velocidad.distancia/3600)/299792.45)
             velocidad_nave.save()
 
             velocidad_contexto = velocidad_informacion

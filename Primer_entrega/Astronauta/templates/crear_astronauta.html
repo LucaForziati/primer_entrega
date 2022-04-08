@@ -1,6 +1,7 @@
 {% extends "padre.html" %}
 {% block ContenidoQueCambia %}
 <h2 class="post-title">¡Se un astronauta!</h2>
+<h6 style = "font-weight: 200;">Ingresa tu nombre y apellido para generar tu id_astronauta</h6>
 <form action="" method = "POST"> {% csrf_token %}
     <table>
         {{astronauta_formulario.as_p}}
